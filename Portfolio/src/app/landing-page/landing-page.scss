@@ -1,7 +1,9 @@
+$purpleColor:#9747FF;
+
 section {
-    
-    z-index: 0;
-  width: auto;
+
+  z-index: 0;
+  width: 100%;
   background-color: #1f2d4f; // untere Farbe
   position: relative;
   height: 100vh;
@@ -9,7 +11,7 @@ section {
 
   &::before {
     content: "";
-    
+
     position: absolute;
     left: 0;
     width: 100%;
@@ -19,38 +21,78 @@ section {
     border-bottom-right-radius: 126% 589px;
   }
 
-  >main{
+   main {
     position: absolute;
     z-index: 1;
-    margin-top: 80;
     height: 100vh;
-
-    width: 100%;
-    display:flex ;
+    display: flex;
     justify-content: space-between;
     color: white;
-    >.name{
-        margin-top: 15%;
-        margin-right: 5%;
-        
+    width: 90%;
+
+    .name  {
+      
+      
+      display: flex;
+    margin-top: 20%;
+   
+    
+    
+      padding-right: 10%;
+      
+      height: 100vh;
+
+
+      .verticalText p {
+        font-size: 70px;
+        writing-mode: vertical-lr;
+
+      }
+
     }
-    .jobColor{
-        color: #9747FF;
-        font-size: 30px;
+
+    .jobColor {
+      color:$purpleColor;
+      font-size: 50px;
     }
-    p{
-        font-size: 35px;
-        margin: 0;
-        
+
+    p {
+      font-size: 60px;
+      margin: 0;
+
     }
-    img{
-        margin-top: 15%;
-        
-        height: 90%;
-        width: 100%;
+
+    img {
+      margin-top: 15%;
+    
+
+      height: 90%;
+      
     }
   }
+  footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    bottom: 0;
+    position: absolute;
+    z-index: 30;
+    >img{
+      height: 30px;
+      width: 30px;
+    }
+    >div{
+      width: 200px;
+      height: 0px;
+      border-style: solid;
+      border-color:$purpleColor;
+    }
+    >a{
+      color: white;
+    }
+  }
+ 
 
-  
+
 }
-
