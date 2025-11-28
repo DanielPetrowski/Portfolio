@@ -1,0 +1,61 @@
+@import "../../../../variables.scss";
+section{
+    background-color: $backgroundcolor;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: right;
+        padding-left: 120px;
+    padding-right: 120px;
+    color: $whiteColor;
+    padding-bottom: 25px;
+
+     >.left-side img{
+        height: 620px;
+        width: auto;
+    }
+
+     >.right-side h2{
+        font-size: 32px;
+        color: $purpleColor;
+    }
+    >.right-side .types{
+        color: $greenColor;
+        font-size: 23px;
+    }
+    >.right-side .info{
+        font-size: 16px;
+    }
+    .two-buttons{
+        display: flex;
+        justify-content: right;
+        gap: 100px;
+    }
+    >.right-side .live-btn{
+background-color: transparent;
+            font-family: inherit;
+            color: $whiteColor;
+            border-color: $purpleColor;
+            border-style: solid;
+            border-radius: 18px;
+            padding: 15px 30px;
+            &:hover{
+                cursor: pointer;
+                background-color: $purpleColor;
+            }
+    }
+    >.right-side .github{
+  background-color: transparent;
+            font-family: inherit;
+            color: $whiteColor;
+            border-color: $greenColor;
+            border-style: solid;
+            border-radius: 18px;
+            padding: 15px 30px;
+            &:hover{
+                cursor: pointer;
+                background-color: $greenColor;
+            }
+    }
+}
