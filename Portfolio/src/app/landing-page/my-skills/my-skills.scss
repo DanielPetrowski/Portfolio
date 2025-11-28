@@ -1,0 +1,127 @@
+@import "../../../variables.scss";
+
+section {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: $backgroundcolor;
+    padding-top: 140px;
+
+
+    >.left-side {
+        margin-left: 120px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 60px;
+        z-index: 0;
+
+        >.bg-img {
+            position: absolute;
+            z-index: -1;
+            bottom: -60%;
+            left: -20%;
+            rotate: -10deg;
+
+            >img {
+
+                height: 600px;
+                width: 600px;
+            }
+        }
+
+
+
+        >.icon {
+            text-align: center;
+            color: $whiteColor;
+
+            &:hover {
+                color: $purpleColor;
+            }
+
+            >img {
+                height: 60px;
+                width: 54px;
+
+                &:hover {
+                    background-color: $purpleColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .right-side {
+
+
+        color: $whiteColor;
+
+
+
+
+
+        >.my-skills {
+            font-size: 90px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+
+
+
+
+            >.line {
+                border-style: solid;
+                border-color: $purpleColor;
+                padding-right: 500px;
+                height: 0px;
+            }
+
+
+
+        }
+
+        >p span {
+            color: $purpleColor;
+
+            font-weight: bold;
+            margin: 0;
+            text-align: end;
+        }
+
+
+        p {
+            font-size: 16px;
+            margin: 20px 0 0 0;
+
+            padding-right: 120px;
+        }
+
+        > .another-skill-text {
+            font-size: 32px;
+        }
+
+
+        button {
+            font-size: 23px;
+            display: flex;
+            justify-content: center;
+            background-color: $greenColor;
+            font-family: inherit;
+            color: $whiteColor;
+            border-style: none;
+            border-radius: 18px;
+            padding: 15px 30px;
+            margin-top: 50px;
+            margin-left: 20%;
+            margin-right: 30%;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+
+}
