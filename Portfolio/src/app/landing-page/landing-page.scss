@@ -1,98 +1,275 @@
-$purpleColor:#9747FF;
+@import '../../variables.scss';
 
 section {
-
   z-index: 0;
   width: 100%;
-  background-color: #1f2d4f; // untere Farbe
-  position: relative;
   height: 100vh;
-  overflow: hidden;
+  position: relative;
+  overflow: visible;
+  background-color: $backgroundcolor;
 
   &::before {
     content: "";
-
     position: absolute;
     left: 0;
     width: 100%;
     height: 90vh;
-    background-color: #141D2F; // obere Farbe
+    background-color: $backgroundcolor;
     border-bottom-left-radius: 0% 27px;
     border-bottom-right-radius: 126% 589px;
+    box-shadow: 70px 120px 295px $shadowColor;
   }
 
-   main {
-    position: absolute;
+  main {
+    position: relative;
     z-index: 1;
     height: 100vh;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    color: white;
-    width: 90%;
+    color: $whiteColor;
+    align-items: flex-start;
 
-    .name  {
-      
-      
-      display: flex;
-    margin-top: 20%;
-   
-    
-    
-      padding-right: 10%;
-      
-      height: 100vh;
+    img {
+      margin-top: 15%;
+      height: 90%;
+      overflow: hidden;
+    }
 
+    .name {
+      display: flex; // I am + Text nebeneinander
+      align-items: flex-start;
+      margin-top: 20%;
+      gap: 4px; // Abstand zwischen "I am" und Text
 
-      .verticalText p {
-        font-size: 70px;
+      .verticalText {
+        font-size: 64px;
         writing-mode: vertical-lr;
+      }
+
+      .mainText {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          font-size: 90px;
+          margin: 0;
+
+          .jobColor {
+            color: $purpleColor;
+            font-size: 58px;
+          }
+        }
+
+        a button {
+          font-size: 32px;
+          background-color: $greenColor;
+          font-family: inherit;
+          border-radius: 18px;
+          color: $whiteColor;
+          margin-top: 20px;
+          padding: 15px 30px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .social_links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 23px;
+
+      img {
+        height: 25px;
+        overflow-x: hidden;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .line {
+        border-style: solid;
+        width: 120px;
+        color: $purpleColor;
+      }
+
+      a {
+        color: $whiteColor;
+        text-decoration: none;
+      }
+    }
+
+    .scroll-down {
+      writing-mode: vertical-lr;
+      color: $whiteColor;
+      font-size: 23px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+
+  section {
+    &::before {
+      border-bottom-right-radius: 400% 589px;
+      height: 40vh;
+    }
+    >.display{
+
+    >main {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+
+      >img {
+        position: relative;
+        overflow-x: hidden;
+        height: 38%;
+        top: -40px;
+      }
+
+      >.name {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 5%;
+        margin-left: 15%;
+
+        >.verticalText {
+
+          font-size: 20px;
+          margin: 0;
+        }
+
+
+        .mainText p,
+        .mainText p
+        >.jobColor {
+          font-size: 20px;
+          text-align: start;
+          gap: 0;
+        }
+
+      }
+
+      >.name .mainText a button {
+        margin-top: 18px;
+        padding: 6px 31px;
+        margin-left: 18px;
+        font-size: 20px;
 
       }
 
     }
 
-    .jobColor {
-      color:$purpleColor;
-      font-size: 50px;
-    }
+    footer {
+      bottom: 10%;
 
-    p {
-      font-size: 60px;
-      margin: 0;
-
-    }
-
-    img {
-      margin-top: 15%;
-    
-
-      height: 90%;
-      
+      >.social_links a,
+      .scroll-down {
+        display: none;
+      }
     }
   }
-  footer{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    bottom: 0;
-    position: absolute;
-    z-index: 30;
-    >img{
-      height: 30px;
-      width: 30px;
-    }
-    >div{
-      width: 200px;
-      height: 0px;
-      border-style: solid;
-      border-color:$purpleColor;
-    }
-    >a{
-      color: white;
-    }
   }
- 
-
-
 }
+// @media (720px <= width <= 1919px){
+//   section {
+//     &::before {
+//       border-bottom-right-radius: 400% 589px;
+//       height: 40vh;
+//     }
+// >.display{
+//     >main {
+//       display: flex;
+//       justify-content: start;
+//       align-items: center;
+//       flex-direction: column;
+
+//       >img {
+//         position: relative;
+//         overflow-x: hidden;
+//         height: 38%;
+//         top: -40px;
+//       }
+
+//       >.name {
+//         display: flex;
+//         justify-content: center;
+//         position: relative;
+//         bottom: 5%;
+//         margin-left: 15%;
+
+//         >.verticalText {
+
+//           font-size: 40px;
+//           margin: 0;
+//         }
+
+
+//         .mainText p,
+//         .mainText p
+//         >.jobColor {
+//           font-size: 60px;
+//           text-align: start;
+//           gap: 0;
+//         }
+
+//       }
+
+//       >.name .mainText a button {
+//         margin-top: 18px;
+//         padding: 6px 31px;
+//         margin-left: 18px;
+//         font-size: 41px;
+
+//       }
+
+//     }
+
+//     footer {
+//       bottom: 10%;
+
+//       >.social_links a,
+//       .scroll-down {
+//         display: none;
+//       }
+//     }
+//   }
+//   }
+// }
+// @media(min-width:1920px){
+//    section{
+//     >.display{
+//       max-width: 1440px;
+//       margin: 0 auto;
+//     >main{
+//      display: flex;
+//      justify-content: center;
+//      align-items: center;
+      
+//     }
+//    }
+//   }
+// }

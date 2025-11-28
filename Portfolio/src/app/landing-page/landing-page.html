@@ -1,41 +1,38 @@
 <section>
+    <div class="display">
     <main>
-        <div>
-            <img src="photo bg_color.png" alt="">
-        </div>
-
-
+        
+        <img src="photo bg_color.png" alt="">
 
         <div class="name">
-            <div class="verticalText">
-                <p>I am</p>
+            <p class="verticalText">{{"I am"|translate}}</p>
+            <div class="mainText">
+                <p>
+                    Daniel Petrowski <br>
+                    <span class="jobColor">Frontend {{"Developer"|translate}}</span>
+                </p>
+                <a href="#contact"><button>{{"Let's-Talk"|translate}}</button></a>
             </div>
-            <p>Daniel Petrowski <br><span class="jobColor">Frontend Developer</span></p>
-
         </div>
-
-
-
-
-
     </main>
 
-
-
     <footer>
-        <div class="line"></div>
-        <img src="social_Media\Vector-2.png" alt="">
-        <img src="social_Media\Vector-1.png" alt="">
-        <img src="social_Media\Vector.png" alt="">
-        <a href="mailto:">testMich@nichtWirklich.de</a>
+        <div class="social_links">
+            <div class="line"></div>
+            <img src="social_Media/Vector-2.png" alt="">
+            <img src="social_Media/Vector-1.png" alt="">
+            <img src="social_Media/Vector.png" alt="">
+            <a href="mailto:testMich@nichtWirklich.de">testMich@nichtWirklich.de</a>
+        </div>
+
+        <div class="scroll-down">
+            <p>scroll {{"down"|translate}} →</p>
+        </div>
     </footer>
-
-
-
-
-
-
-
-
-
+    </div>
 </section>
+
+<app-about-me></app-about-me>
+<app-my-skills></app-my-skills>
+<app-portfolio></app-portfolio>
+<app-contact></app-contact> 
