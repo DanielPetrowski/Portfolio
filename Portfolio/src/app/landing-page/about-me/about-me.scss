@@ -1,0 +1,77 @@
+@import "../../../variables.scss";
+
+   section {
+
+
+       padding-left: 120px;
+       background-color: $backgroundcolor;
+       height: 100vh;
+       width: auto;
+       color: $whiteColor;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+
+
+       .aboutMe h2 {
+
+           margin: 0 0 50px 0;
+           font-size: 90px;
+       }
+       .aboutMe p{
+        font-size: 16px;
+       }
+
+       div .left-side {
+           display: flex;
+           gap: 20px;
+       }
+       .left-side img{
+        height: 64px;
+        width: 64px;
+       }
+
+
+
+       >.right-side {
+           display: flex;
+           align-items: center;
+          
+
+
+       }
+
+
+
+       >div .circle {
+
+display: flex;
+align-items: center;
+           border-style: solid;
+           border-color: $greenColor;
+           border-radius: 500px;
+           width: 500px;
+           height: 500px;
+
+           margin: 0 0 0 100px
+       }
+
+       >div .line {
+       
+           border-style: solid;
+           z-index: 1;
+           border-color: $greenColor;
+           width: 300px;
+           height: 0px;
+           
+       }
+
+
+       .bg_image{
+     rotate: 264deg;
+    position: absolute;
+    z-index: 0;
+    right: -25%;
+    padding-left: 100px;
+       }
+   }

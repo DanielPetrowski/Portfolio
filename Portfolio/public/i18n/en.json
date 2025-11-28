@@ -1,0 +1,38 @@
+{
+  "about-me":"About me",
+  "Developer":"Developer",
+  "Let's-Talk":"Let'sTalk",
+  "down":"down",
+  "I am":"I am",
+
+  "introduction":"I’m passionate about software development and web design, and I started learning through online videos. I enjoy working with JavaScript, Angular, and Git because I like solving problems and growing professionally. I prefer teamwork since it helps me learn from others. My motivation comes from enjoying the learning process, creating my own projects, and building a career in IT.",
+  "technologie-text":"here a list of my technologie i used in my projects",
+  "Looking for":"Looking for",
+  "another":"another Skill",
+  "Discovering frameworks":" Discovering and mastering new frameworks and technologies truly excites me",
+  "Touch":"Get in Touch",
+
+  "portfolio-subheadline":"Explore a selection of my work here - Interact with projects to see my skills in action.",
+  "join-info":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "pokedex-info":"Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+  "game-info":"A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and poison bottles to fight against the killer Chicken.",
+
+"contact":"Contact",
+  "contact-subheadline":"got a problem to solve?",
+  
+  "contact-name":"your name",
+  "contact-email":"your E-mail",
+  "contact-message":"your message",
+  "subheadline-desc-1":"I’d love to connect and contribute as a Frontend Developer",
+  "subheadline-desc-2":" bringing user-friendly and high-performance solutions to your projects.",
+  "offer-1":"Need a Frontend developer?",
+  "offer-2":"Contact me!",
+  "policy-1":"I've read the",
+  "policy-2":"privacy policy",
+  "policy-3":"and agree to the processing of my data as outlined",
+  "message":"send message :)",
+  "legal":"Legal Notice"
+
+
+
+}
