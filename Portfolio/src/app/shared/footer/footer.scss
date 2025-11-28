@@ -1,0 +1,34 @@
+@import "../../../variables.scss";
+section{
+    position: absolute;
+    height: 240px;
+    width: 100%;
+    background-color:$backgroundcolor ;
+    border-top-style: solid;
+    border-top-color: $greenColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $whiteColor;
+
+    a{
+        text-decoration: none;
+        color: $whiteColor;
+    }
+    >.left{
+        margin-left: 120px;
+    }
+    >.middle{
+        font-size: 23px;
+    }
+    >.right{
+        display: flex;
+        gap: 40px;
+        margin-right: 120px;
+       >img{
+        &:hover{
+            cursor: pointer;
+        }
+       }
+    }
+}

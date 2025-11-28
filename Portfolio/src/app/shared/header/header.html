@@ -1,18 +1,25 @@
 <section>
-    
-        <h2>DANIEL</h2>
 
-        <nav>
-            <div>
-            <a href="#">ABOUT ME</a>
-            <a href="#">SKILLS</a>
-            <a href="#">PORTFOLIO</a>
+    <h2>DANIEL</h2>
+
+    <nav>
+        <div>
+            <a href="#about-me">{{"about-me"|translate}}</a>
+            <a href="#my-skills">skills</a>
+            <a href="#portfolio">Portfolio</a>
+            
+
+        </div>
+
+       
+
+        <div class="btn-field">
+            <button (click)="useLanguage('de')">DE</button>
+            <button (click)="useLanguage('en')" >EN</button>
+        </div>
+    </nav>
+     <div class="burger">
+                <img src="Property 1=burger.png" alt="">
             </div>
 
-            <div class="btn-field">
-            <button>DE</button>
-            <button>EN</button>
-            </div>
-        </nav>
-    
 </section>
