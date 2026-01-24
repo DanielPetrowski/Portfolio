@@ -1,35 +1,45 @@
-<section>
-    <div class="display">
-    <main>
-        
-        <img src="photo bg_color.png" alt="">
+<section id="landing_page">
+  <div class="main">
+    <div class="middle_area">
+      <div class="left_side">
+        <img src="photo bg_color.png" alt="" />
+        <img class="person" src="hero character photo.png" alt="" />
+      </div>
 
-        <div class="name">
-            <p class="verticalText">{{"I am"|translate}}</p>
-            <div class="mainText">
-                <p>
-                    Daniel Petrowski <br>
-                    <span class="jobColor">Frontend {{"Developer"|translate}}</span>
-                </p>
-                <a href="#contact"><button>{{"Let's-Talk"|translate}}</button></a>
-            </div>
-        </div>
-    </main>
 
-    <footer>
-        <div class="social_links">
-            <div class="line"></div>
-            <img src="social_Media/Vector-2.png" alt="">
-            <img src="social_Media/Vector-1.png" alt="">
-            <img src="social_Media/Vector.png" alt="">
-            <a href="mailto:testMich@nichtWirklich.de">testMich@nichtWirklich.de</a>
-        </div>
 
-        <div class="scroll-down">
-            <p>scroll {{"down"|translate}} →</p>
+<div class="right_side">
+      
+        <div class="my_name">
+          <div class="vertical">
+        <span>{{ 'I am' | translate }}</span>
+      </div>
+          <div class="name">
+            Daniel Petrowski
+            <div class="job">Frontend {{'Developer'|translate}}</div>
+          </div>
         </div>
-    </footer>
+      <div class="test">
+        <a href="#contact"><button class="lets_talk">{{"Let's-Talk"| translate}}</button></a>
+      </div>
+      </div>
     </div>
+    <div class="main_footer">
+      <div class="footer_left">
+        <div class="footer_line"></div>
+        <div class="social_links">
+          <a href="https://github.com/DanielPetrowski"><img src="social_Media\Vector-2.png" alt="" /></a>
+         <a href="mailto:petrowskidaniel@web.de"> <img src="social_Media/Vector-1.png" alt="" /></a>
+          <a href="https://www.linkedin.com/in/daniel-petrowski-0083673a8/"><img src="social_Media/Vector.png" alt="" /></a>
+        </div>
+        <a class="email" href="mailto:kontakt@daniel-petrowski.de">kontakt@daniel-petrowski.de</a>
+      </div>
+
+      <div class="footer_right">
+        <div class="go_down">Scroll {{'down'|translate}} -></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <app-about-me></app-about-me>

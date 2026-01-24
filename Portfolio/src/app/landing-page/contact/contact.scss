@@ -1,186 +1,381 @@
 @import '../../../variables.scss';
-
 section {
-    background-color: $backgroundcolor ;
+  background-color: $backgroundcolor;
+      padding-top: 110px;
+
+}
+.headline {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.line {
+  width: 532px;
+  height: 0;
+  border-style: solid;
+  border-color: $purpleColor;
+}
+.contact {
+  color: $whiteColor;
+  font-size: 90px;
+  font-weight: bold;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.left_side {
+  p {
+    color: $whiteColor;
+  }
+}
+.subheadline {
+  font-size: 32px;
+  font-weight: bold;
+  color: $whiteColor;
+  margin-bottom: 24px;
+}
+.offer {
+  margin-top: 10px;
+  span {
+    font-weight: bold;
+  }
+}
+.right_side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 770px;
+  span {
+    color: $whiteColor;
+  }
+  .policy {
+    color: $purpleColor;
+    text-decoration: none;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.input_fields {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    color: $whiteColor;
+    height: 50px;
+    width: 617px;
+    border: 2px solid $purpleColor;
+    background-color: transparent;
+    border-radius: 10px;
+    padding-left: 25px; // verschiebe direkt hierher statt ::placeholder
     position: relative;
-    >.bg-img-container{
-     top: 31%;
-    position: absolute;
    
-    height: 798px;
-    left: -31%;
-    overflow: hidden;
-    >img{
-            height: 131%;
-    }
-    }
+      &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset; 
+    -webkit-text-fill-color: $whiteColor; 
+    transition: background-color 5000s ease-in-out 0s; 
+  }
 
-
-    >.header {
-        padding-top: 120px;
-        padding-bottom: 100px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 20px;
-
-        >.line {
-
-            width: 40%;
-            height: 0px;
-            color: $purpleColor;
-
-            border-style: solid;
-        }
-
-        >h2 {
-            font-size: 90px;
-            margin: 0;
-            color: $whiteColor;
-        }
-
+    &::placeholder {
+      color: $whiteColor;
     }
 
-    >.body {
-        margin: 0 120px;
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 100px;
-
-        >.text {
-            >.sub-headline {
-                font-size: 32px;
-            }
-
-            p {
-                font-size: 16px;
-                color: $whiteColor;
-            }
-        }
-
-        >.input {
-
-            display: flex;
-            flex-direction: column;
-
-            gap: 30px;
-
-            >a img {
-                height: 50px;
-                width: 50px;
-                position: relative;
-                left: 100%;
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-
-            }
-
-            >.policy {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-
-                >p {
-                    color: $whiteColor;
-                    font-size: 14px;
-
-                    >span {
-                        color: $purpleColor;
-                        font-size: 14px;
-                    }
-                }
-
-                >.btn-check {
-                    input {
-                        display: none;
-                    }
-
-                    span {
-                        width: 24px;
-                        height: 24px;
-                        border: 2px solid, $greenColor;
-                        position: relative;
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-                        transition: 0.2s;
-                    }
-
-                    input:checked+span::after {
-                        content: "\2714";
-                        color: $greenColor;
-                        position: absolute;
-
-
-
-                    }
-                }
-
-            }
-
-            >textarea {
-                height: 150px;
-                background-color: $backgroundcolor;
-                border-style: solid;
-                border-color: $purpleColor;
-                padding: 10px 10px;
-                border-radius: 20px;
-                color: $whiteColor;
-
-
-                &::placeholder {
-                    color: $whiteColor;
-                    text-align: left;
-                }
-            }
-
-
-            >input {
-
-                width: 830px;
-                background-color: $backgroundcolor;
-                border-style: solid;
-                border-color: $purpleColor;
-                padding: 10px 10px;
-                border-radius: 20px;
-                color: $whiteColor;
-
-
-
-
-                &::placeholder {
-                    color: $whiteColor;
-                    text-align: left;
-                }
-
-
-
-
-
-            }
-
-            button {
-                position: relative;
-
-                font-size: 32px;
-                background-color: $greyColor;
-                font-family: inherit;
-                border-radius: 18px;
-                color: $whiteColor;
-                margin: 0 200px;
-                padding: 15px;
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: $greenColor;
-                }
-            }
-
-        }
+    &:hover {
+      border-color: $greenColor;
     }
 
+    &:focus {
+      outline: none; // 👈 entfernt den Browser-Fokus-Ring
+      border-color: $greenColor; // optional: Border beim Focus grün
+    }
+  }
+  form {
+    margin-bottom: 34px;
+  }
+
+  input.invalid,
+  textarea.invalid {
+    border: 2px solid red;
+  }
+  input.valid,
+  textarea.valid {
+    border: 2px solid $greenColor;
+  }
+  .input_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    margin-bottom: 34px;
+    margin-left: 56px;
+    img {
+      padding-right: 24px;
+    }
+  }
+  .input_wrapper_mail {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    margin-bottom: 34px;
+    margin-left: 56px;
+    img {
+      padding-right: 24px;
+    }
+  }
+  .input_wrapper_textarea {
+    justify-content: end;
+    display: flex;
+    align-items: start;
+    position: relative;
+  }
+  .error_img {
+    position: absolute;
+  }
+  .textarea_error_img {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+  }
+  .error_mail {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+  }
+  .error_textarea {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 56px;
+  }
+  textarea {
+    width: 646px;
+    height: 202px;
+    border-style: solid;
+    border-color: $purpleColor;
+    background-color: transparent;
+    border-radius: 10px;
+    color: $whiteColor;
+    border-width: 2px;
+    &::placeholder {
+      color: $whiteColor;
+      padding-left: 25px;
+      padding-top: 15px;
+    }
+    &:hover {
+      border-color: $greenColor;
+    }
+    &:focus {
+      border-color: $greenColor;
+      outline: none;
+    }
+  }
+  textarea.invalid {
+    border: 2px solid red;
+  }
+  textarea.valid {
+    border: 2px solid $greenColor;
+  }
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+  font-size: 14px;
+  align-self: center;
+}
+
+.bottom {
+}
+button {
+  width: 253px;
+  height: 58px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: $greenColor;
+  max-height: 63px;
+  font-size: 23px;
+  text-align: center;
+  align-self: center;
+  color: $whiteColor;
+  margin-top: 30px;
+  transition:
+    width 0.1s,
+    height 0.1s,
+    background-color 0.1s;
+  &:hover {
+    cursor: pointer;
+    width: 258px;
+    height: 63px;
+    background-color: $purpleColor;
+  }
+  &:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+a {
+  align-self: flex-end;
+  .arrow_up {
+    path {
+      transition: fill 0.2s;
+    }
+
+    rect {
+      transition: stroke 0.2s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      path {
+        fill: $greenColor;
+      }
+
+      rect {
+        stroke: $greenColor;
+      }
+    }
+  }
+}
+.checkbox {
+  input[type='checkbox'] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $greenColor;
+    border-radius: 0;
+    background: transparent;
+    margin-right: 8px;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type='checkbox']::after {
+    content: '✔';
+    color: $greenColor;
+    font-size: 14px;
+    line-height: 1;
+    padding-right: 26px;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  input[type='checkbox']:checked::after {
+    opacity: 1;
+  }
+}
+@media (max-width: 1050px) {
+  .line {
+    width: 20px;
+  }
+  .contact {
+    font-size: 45px;
+  }
+  .main {
+    margin: 0 32px;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .subheadline {
+    font-size: 23px;
+  }
+  .right_side {
+    width: 100%;
+    justify-content: center;
+  }
+  .input_fields {
+    width: 100%;
+    align-items: center;
+
+    .error_textarea{
+    margin-left: 0;
+  }
+
+    .input_wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+    .input_wrapper_mail {
+      margin-left: 0;
+      width: 100%;
+    }
+    .input_wrapper_textarea {
+      width: 100%;
+    }
+    input {
+      height: 40px;
+      width: 100%;
+    //   padding-left: 35px;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+    }
+    .error_textarea {
+      width: 100%;
+    }
+    form {
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  
+  a {
+    align-self: end;
+  }
+  
+}
+@media (min-width: 2160px) {
+  section{
+           padding-left: calc((100% - 1440px) / 2);
+        padding-right: calc((100% - 1440px) / 2);
+  }
+}
+
+.toast {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  opacity: 0.95;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
 }

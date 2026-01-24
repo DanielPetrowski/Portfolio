@@ -1,16 +1,32 @@
+import { NgIf } from '@angular/common';
 import { Component,inject } from '@angular/core';
 import {  TranslatePipe, TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe,NgIf],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
  private translate = inject(TranslateService);
 
-  useLanguage(language: string): void {
-      this.translate.use(language);
-  }
+ 
+
+activeLang = 'de';
+
+useLanguage(language: string): void {
+  this.activeLang = language;
+  this.translate.use(language);
 }
+
+
+menuOpen = false;
+
+toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+}
+}
+
+

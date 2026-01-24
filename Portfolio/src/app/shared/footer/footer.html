@@ -1,22 +1,47 @@
 <section>
+    <div class="main desktop" >  
     <div class="left">
         <div>
             <h2>DANIEL</h2>
-            <a routerLink="#">test</a>
-            <p><a routerLink="/legal-notice">{{"legal"|translate}}</a></p>
+             <p #legalLink><a routerLink="/legal-notice">{{"legal"|translate}}</a></p>
         </div>
     </div>
 
-    <div class="middle">
+    <div class="middle" #middle>
         <p>© Daniel Petrowski 2025</p>
     </div>
 
     <div class="right">
-        <img src="social_Media/Vector-1.png" alt="">
-        <img src="social_Media/Vector-2.png" alt="">
-        <img src="social_Media/Vector.png" alt="">
+           <a href="https://github.com/DanielPetrowski"><img src="social_Media\Vector-2.png" alt="" /></a>
+         <a href="mailto:petrowskidaniel@web.de"> <img src="social_Media/Vector-1.png" alt="" /></a>
+          <a href="https://www.linkedin.com/in/daniel-petrowski-0083673a8/"><img src="social_Media/Vector.png" alt="" /></a>
+    </div>
+</div>
+
+
+
+
+ <div  class="main mobil">  
+    <div class="left">
+        <div>
+            <h2>DANIEL</h2>
+             
+        </div>
     </div>
 
+    <div class="middle" #middle>
+        <p>© Daniel Petrowski 2025</p>
+    </div>
+
+    <div class="right">
+      <a href="https://github.com/DanielPetrowski"><img src="social_Media\Vector-2.png" alt="" /></a>
+         <a href="mailto:petrowskidaniel@web.de"> <img src="social_Media/Vector-1.png" alt="" /></a>
+          <a href="https://www.linkedin.com/in/daniel-petrowski-0083673a8/"><img src="social_Media/Vector.png" alt="" /></a>
+    </div>
+    <p #legalLink><a routerLink="/legal-notice">{{"legal"|translate}}</a></p>
+</div>
+
 </section>
+
 
 

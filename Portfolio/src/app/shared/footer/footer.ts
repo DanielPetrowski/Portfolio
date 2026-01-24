@@ -1,4 +1,4 @@
-import { Component,inject } from '@angular/core';
+import { Component,inject, } from '@angular/core';
 import { TranslatePipe,TranslateService } from '@ngx-translate/core';
 
 import { RouterLink } from "@angular/router";
@@ -6,14 +6,16 @@ import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
+  standalone:true,
   imports: [TranslatePipe, RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class Footer {
+export class Footer  {
   private translate = inject(TranslateService);
 
   useLanguage(language: string): void {
       this.translate.use(language);
   }
+ 
 }

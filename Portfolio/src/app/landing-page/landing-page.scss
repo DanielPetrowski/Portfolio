@@ -1,276 +1,221 @@
 @import '../../variables.scss';
 
-
 section {
+  background-color: $backgroundcolor;
+}
+.main {
   z-index: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 110px);
   position: relative;
   overflow: visible;
-  background-color: $backgroundcolor;
+  padding-top: 110px;
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 90vh;
-    background-color: $backgroundcolor;
-    border-bottom-left-radius: 0% 27px;
-    border-bottom-right-radius: 126% 589px;
-    box-shadow: 70px 120px 295px $shadowColor;
+    height: 615px;
+    background-color: #141D2F;
+    border-bottom-left-radius: 0px 82px;
+    border-bottom-right-radius: 643px;
+    box-shadow: 70px 20px 295px #1f2d4f;
   }
+}
+.middle_area {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  max-width: 1540px;
+  justify-content: space-between;
+  font-size: 4vw;
+  color: $whiteColor;
+}
+.left_side {
+  height: 641px;
+  width: 100%;
 
-  main {
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    color: $whiteColor;
-    align-items: flex-start;
-
-    img {
-      margin-top: 15%;
-      height: 90%;
-      overflow: hidden;
-    }
-
-    .name {
-      display: flex; // I am + Text nebeneinander
-      align-items: flex-start;
-      margin-top: 20%;
-      gap: 4px; // Abstand zwischen "I am" und Text
-
-      .verticalText {
-        font-size: 64px;
-        writing-mode: vertical-lr;
-      }
-
-      .mainText {
-        display: flex;
-        flex-direction: column;
-
-        p {
-          font-size: 90px;
-          margin: 0;
-
-          .jobColor {
-            color: $purpleColor;
-            font-size: 58px;
-          }
-        }
-
-        a button {
-          font-size: 32px;
-          background-color: $greenColor;
-          font-family: inherit;
-          border-radius: 18px;
-          color: $whiteColor;
-          margin-top: 20px;
-          padding: 15px 30px;
-
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-
-  footer {
-    height: 150px;
+  position: relative;
+  img {
+       /* object-fit: contain; */
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: 4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .social_links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      font-size: 23px;
-
-      img {
-        height: 25px;
-        overflow-x: hidden;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      .line {
-        border-style: solid;
-        width: 120px;
-        color: $purpleColor;
-      }
-
-      a {
-        color: $whiteColor;
-        text-decoration: none;
-      }
-    }
-
-    .scroll-down {
-      writing-mode: vertical-lr;
-      color: $whiteColor;
-      font-size: 23px;
-    }
+    height: 647px;
+  }
+}
+.person {
+  position: absolute;
+  top: -33px;
+  left: 0;
+ 
+}
+.right_side {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.vertical {
+  writing-mode: vertical-lr;
+  font-size: 2.8vw;
+  display: flex;
+  align-self: center;
+  margin-right: 35px;
+}
+.my_name {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.job {
+  font-size: 3vw;
+  color: $purpleColor;
+}
+.test {
+  display: flex;
+  height: 63px;
+  width: 100%;
+  justify-content: center;
+}
+.lets_talk {
+  width: 185px;
+  height: 58px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: $greenColor;
+  max-height: 63px;
+  font-size: 23px;
+  text-align: center;
+  align-self: center;
+  color: $whiteColor;
+  margin-top: 30px;
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  &:hover {
+    cursor: pointer;
+    width: 190px;
+    height: 63px;
+    background-color: $purpleColor;
   }
 }
 
+.main_footer {
+  height: 160px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer_left {
+  display: flex;
+  height: 150%;
+  align-items: center;
+  gap: 32px;
+}
+.footer_line {
+  border-color: $purpleColor;
+  border-style: solid;
+  width: 100px;
+}
+.social_links {
+  display: flex;
+  gap: 32px;
 
+  img {
+    height: 30px;
+    transition: scale 0.2s;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+.email {
+  font-size: 23px;
+  color: $whiteColor;
+  text-decoration: none;
+}
+.go_down {
+  font-size: 23px;
+  color: $whiteColor;
+  writing-mode: vertical-lr;
+  margin-right: 100px;
+}
 
-
-@media (max-width: 767px) {
-
-
-  section {
+@media (max-width: 1050px) {
+  .main {
     &::before {
-      border-bottom-right-radius: 400% 589px;
-      height: 40vh;
-    }
-    >.display{
-
-    >main {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      flex-direction: column;
-
-      >img {
-        position: relative;
-        overflow-x: hidden;
-        height: 38%;
-        top: -40px;
-      }
-
-      >.name {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        bottom: 5%;
-        margin-left: 15%;
-
-        >.verticalText {
-
-          font-size: 20px;
-          margin: 0;
-        }
-
-
-        .mainText p,
-        .mainText p
-        >.jobColor {
-          font-size: 20px;
-          text-align: start;
-          gap: 0;
-        }
-
-      }
-
-      >.name .mainText a button {
-        margin-top: 18px;
-        padding: 6px 31px;
-        margin-left: 18px;
-        font-size: 20px;
-
-      }
-
-    }
-
-    footer {
-      bottom: 10%;
-
-      >.social_links a,
-      .scroll-down {
-        display: none;
-      }
+      content: '';
+      height: 39vh;
+      border-bottom-left-radius: 0% 82px;
+      border-bottom-right-radius: 37%;
     }
   }
+  .middle_area {
+    font-size: 35px;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+  }
+  .left_side {
+    margin-left: 0;
+  }
+  .job {
+    font-size: 25px;
+  }
+  .vertical {
+    font-size: 21px;
+    margin-right: 0;
+  }
+  .left_side {
+    img {
+      height: 40vh;
+      top: -8px;
+      object-fit: contain;
+    }
+  }
+
+  .right_side {
+    justify-content: center;
+  }
+  .person {
+    transform: rotate(0deg);
+  }
+  .email {
+    display: none;
+  }
+  .go_down {
+    display: none;
   }
 }
-// @media (720px <= width <= 1919px){
-//   section {
-//     &::before {
-//       border-bottom-right-radius: 400% 589px;
-//       height: 40vh;
-//     }
-// >.display{
-//     >main {
-//       display: flex;
-//       justify-content: start;
-//       align-items: center;
-//       flex-direction: column;
 
-//       >img {
-//         position: relative;
-//         overflow-x: hidden;
-//         height: 38%;
-//         top: -40px;
-//       }
-
-//       >.name {
-//         display: flex;
-//         justify-content: center;
-//         position: relative;
-//         bottom: 5%;
-//         margin-left: 15%;
-
-//         >.verticalText {
-
-//           font-size: 40px;
-//           margin: 0;
-//         }
-
-
-//         .mainText p,
-//         .mainText p
-//         >.jobColor {
-//           font-size: 60px;
-//           text-align: start;
-//           gap: 0;
-//         }
-
-//       }
-
-//       >.name .mainText a button {
-//         margin-top: 18px;
-//         padding: 6px 31px;
-//         margin-left: 18px;
-//         font-size: 41px;
-
-//       }
-
-//     }
-
-//     footer {
-//       bottom: 10%;
-
-//       >.social_links a,
-//       .scroll-down {
-//         display: none;
-//       }
-//     }
-//   }
-//   }
-// }
-// @media(min-width:1920px){
-//    section{
-//     >.display{
-//       max-width: 1440px;
-//       margin: 0 auto;
-//     >main{
-//      display: flex;
-//      justify-content: center;
-//      align-items: center;
-      
-//     }
-//    }
-//   }
-// }
+.social_links {
+  height: 30px;
+  width: auto;
+}
+@media (min-width: 2160px) {
+  section{
+           padding-left: calc((100% - 1440px) / 2);
+        padding-right: calc((100% - 1440px) / 2);
+  }
+  .main{
+        height: 1080px;
+        &::before{
+          height: 800px;
+        }
+  }
+  .middle_area {
+    font-size: 70px;
+  }
+  .left_side{
+    img{
+      height: 820px;
+    }
+  }
+  .job {
+    font-size: 54px;
+  }
+  .vertical {
+    font-size: 54px;
+  }
+}

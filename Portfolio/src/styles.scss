@@ -1,11 +1,25 @@
+@import"./variables.scss";
 *{
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body{
   overflow-x: hidden;
     margin: 0;
+    background-color: $backgroundcolor;
     
 }
+
+
+
+//   .container {
+//   max-width: 1440px;  /* maximale Breite */
+//   margin: 0 auto;      /* zentriert horizontal */
+//   padding: 0 20px;     /* optional: Abstand zu den Rändern */
+//   box-sizing: border-box; /* verhindert Überlauf durch Padding */
+// }
+
 
  

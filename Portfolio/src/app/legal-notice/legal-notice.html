@@ -1,13 +1,59 @@
-<p id="legal-notice">legal-notice works!</p>
-Impressum
-Informationen über den Diensteanbieter.
-
-MusterMax Mustermann
-
-Musterstrasse 144445 test,
-12345 Musterhausen,
-Deutschland
-
-Tel.: 01234/56789
-Fax: 01234/56789-0
-E-Mail: office@musterfirma.de
+<section class="imprint">
+<div class="arrow_container">
+   <a routerLink="/"> <img class="arrow" src="Legal notice arrow.svg" alt=""></a>
+    <div class="imprint-head">
+        
+    <div class="line"></div>
+	
+		<h1>{{ 'headline' | translate }}</h1>
+        <div class="long_line"></div>
+	</div>
+    </div>
+	<div class="container">
+		<div class="imprint-body">
+			<div class="imprint-body-head">
+				<h2>{{ 'imprint' | translate }}</h2>
+				<ul>
+					<li>{{ 'name' | translate }}</li>
+					<li>{{ 'address' | translate }}</li>
+				</ul>
+				<div>
+					<h3>{{ 'exploring' | translate }}</h3>
+					<p>{{ 'email' | translate }}</p>
+				</div>
+			</div>
+			<div class="imprint-body-content">
+				<div>
+					<h3>{{ 'accept-terms' | translate }}</h3>
+					<p>{{ 'terms-1' | translate }} <span>Portfolio</span>{{"terms-2"|translate}}</p>
+				</div>
+				<div>
+					<h3>{{ 'scope' | translate }}</h3>
+					<p><span>Portfolio</span>{{ 'scope-one' | translate }} <span>Developer Akademie GmbH</span> {{"scope-one-2"|translate}}</p>
+					<br>
+					<p>{{ 'scope-two' | translate }} <span>Portfolio</span>{{"scope-two-2"|translate}} <span>Developer Akademie GmbH.</span>{{"scope-two-3"|translate}}</p>
+				</div>
+				<div>
+					<h3>{{ 'proprietary' | translate }}</h3>
+					<p>{{ 'rights' | translate }} <span>Developer Akademie GmbH</span>{{"rights-2"|translate}} <span>Portfolio</span>{{"rights-3"|translate}}</p>
+				</div>
+				<div>
+					<h3>{{ 'product' | translate }}</h3>
+					<p><span>Portfolio</span>{{ 'use' | translate }} <span>Portfolio</span>{{"use-2"|translate}} <span>Portfolio</span></p>
+				</div>
+				<div>
+					<h3>{{ 'warranties' | translate }}</h3>
+					<p> <span>Portfolio</span>{{ 'disclaimer' | translate }} <span>Developer Akademie</span> {{"disclaimer-2"|translate}} <span>Portfolio</span></p>
+				</div>
+				<div>
+					<h3>{{ 'indemnity' | translate }}</h3>
+					<p>{{ 'agreement' | translate }} <span>Developer Akademie</span>{{"agreement-2"|translate}} <span>Portfolio</span>{{"agreement-3"|translate}}</p>
+					<br>
+					<p>{{ 'contact' | translate }}</p>
+					<br>
+					<p>{{ 'date' | translate }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

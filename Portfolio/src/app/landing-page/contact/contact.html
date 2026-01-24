@@ -1,34 +1,160 @@
 <section id="contact">
-    <div class="header">
-        <div class="line"></div>
-        <h2>{{"contact"|translate}}</h2>
+  <div class="headline">
+    <div class="line"></div>
+    <div class="contact">{{ 'contact-main' | translate }}</div>
+  </div>
+  <div class="main">
+    <div class="left_side">
+      <p class="subheadline">{{ 'contact-subheadline' | translate }}</p>
+      <p>{{ 'subheadline-desc-1' | translate }}</p>
+      <p>{{ 'subheadline-desc-2' | translate }}</p>
+      <p class="offer">
+        {{ 'offer-1' | translate }}
+        <span
+          ><b>{{ 'offer-2' | translate }}</b></span
+        >
+      </p>
     </div>
 
-    <div class="body">
-        <div class="text">
-            <p class="sub-headline"><b>{{"contact-subheadline"|translate}}</b></p>
-            <p>{{"subheadline-desc-1"|translate}}<br>{{"subheadline-desc-2"|translate}}</p>
-            <p>{{"offer-1"|translate}}<b> {{"offer-2"|translate}}</b></p>
-        </div>
-        <div class="input">
-            <input type="text" [placeholder]="'contact-name'|translate">
-            <input type="email" [placeholder]="'contact-email'|translate">
-            <textarea [placeholder]="'contact-message'|translate"></textarea>
-            <div class="policy">
-            <label class="btn-check">
-                <input type="checkbox">
-                <span></span>
-            </label>
-            <p>{{"policy-1"|translate}} <span>{{"policy-2"|translate}}</span> {{"policy-3"|translate}}</p>
+    <div class="right_side">
+      <div class="input_fields">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+          <!-- NAME -->
+          <div class="input_wrapper">
+            <input
+              type="text"
+              name="name"
+              ngModel
+              required
+              [placeholder]="'contact-name' | translate"
+              #name="ngModel"
+              [ngClass]="{
+                invalid: name.invalid && (name.touched || formSubmitted),
+                valid: name.valid && (name.touched || formSubmitted),
+              }"
+            />
+
+            <div class="error_img" *ngIf="name.invalid && (name.touched || formSubmitted)">
+              <img src="required.png" alt="" />
             </div>
-            <button>{{"message"|translate}}</button>
-            <a href=#>
-            <img src="4. Go up button.png" alt="">
-            </a>
 
-        </div>
+            <div
+              [ngClass]="{ valid: name.valid && (name.touched || formSubmitted) }"
+              class="error_img"
+              *ngIf="name.valid && (name.touched || formSubmitted)"
+            >
+              <img src="checked.png" alt="" />
+            </div>
+
+            <!-- FEHLERMELDUNG -->
+            <div class="error" *ngIf="name.invalid && (name.touched || formSubmitted)">
+              {{ 'error-name' | translate }}
+            </div>
+          </div>
+
+          <div class="input_wrapper_mail">
+            <input
+              type="email"
+              name="email"
+              ngModel
+              required
+              email
+              [placeholder]="'contact-email' | translate"
+              #email="ngModel"
+              [ngClass]="{
+                invalid: (email.invalid && email.touched) || formSubmitted,
+                valid: (email.valid && email.touched) || formSubmitted,
+              }"
+            />
+            <div class="error_img" *ngIf="email.invalid && (email.touched || formSubmitted)">
+              <img src="required.png" alt="" />
+            </div>
+
+            <div class="error_img" *ngIf="email.valid && (email.touched || formSubmitted)">
+              <img src="checked.png" alt="" />
+            </div>
+            <div class="error_mail" *ngIf="email.invalid && (email.touched || formSubmitted)">
+              {{ 'error-email' | translate }}
+            </div>
+          </div>
+
+          <!-- FEHLERMELDUNG -->
+
+          <div class="input_wrapper_textarea">
+            <textarea
+              name="message"
+              ngModel
+              required
+              minlength="10"
+              [placeholder]="'contact-message' | translate"
+              #message="ngModel"
+              [ngClass]="{
+                invalid: (message.invalid && message.touched) || formSubmitted,
+                valid: (message.valid && message.touched) || formSubmitted,
+              }"
+            ></textarea>
+
+            <!-- ERROR ICON -->
+            <div
+              class="textarea_error_img"
+              *ngIf="message.invalid && (message.touched || formSubmitted)"
+            >
+              <img src="required.png" alt="" />
+            </div>
+
+            <!-- SUCCESS ICON -->
+            <div
+              class="textarea_error_img"
+              *ngIf="message.valid && (message.touched || formSubmitted)"
+            >
+              <img src="checked.png" alt="" />
+            </div>
+          </div>
+
+          <!-- FEHLERMELDUNG -->
+          <div class="error_textarea" *ngIf="message.invalid && (message.touched || formSubmitted)">
+            {{ 'error-message' | translate }}
+          </div>
+
+          <div class="bottom">
+            <div class="checkbox">
+              <input type="checkbox" name="policy" ngModel #policy="ngModel" required />
+            </div>
+            <span
+              >{{ 'policy-1' | translate }}
+              <a routerLink="/legal-notice" class="policy">{{ 'policy-2' | translate }}</a
+              >{{ 'policy-3' | translate }}</span
+            >
+          </div>
+          <button
+            type="submit"
+            [disabled]="form.invalid || !policy.value"
+            [ngClass]="{ disabled: form.invalid || !policy.value }"
+          >
+            {{ 'message' | translate }}
+          </button>
+
+          <div class="toast success" *ngIf="mailSent">Mail erfolgreich gesendet!</div>
+
+          <div class="toast error" *ngIf="mailError">Fehler beim Senden der Mail!</div>
+        </form>
+      </div>
+      <a href="#landing_page">
+        <svg
+          class="arrow_up"
+          width="39"
+          height="39"
+          viewBox="0 0 39 39"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+          <path
+            d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+            fill="white"
+          />
+        </svg>
+      </a>
     </div>
-    <div class="bg-img-container">
-    <img class="img-bg" src="33. Purple shadow Footer.png" alt="">
-    </div>
+  </div>
 </section>
