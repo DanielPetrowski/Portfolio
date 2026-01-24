@@ -35,7 +35,7 @@
             />
 
             <div class="error_img" *ngIf="name.invalid && (name.touched || formSubmitted)">
-              <img src="required.png" alt="" />
+              <img src="img/required.png" alt="" />
             </div>
 
             <div
@@ -43,7 +43,7 @@
               class="error_img"
               *ngIf="name.valid && (name.touched || formSubmitted)"
             >
-              <img src="checked.png" alt="" />
+              <img src="img/checked.png" alt="" />
             </div>
 
             <!-- FEHLERMELDUNG -->
@@ -67,11 +67,11 @@
               }"
             />
             <div class="error_img" *ngIf="email.invalid && (email.touched || formSubmitted)">
-              <img src="required.png" alt="" />
+              <img src="img/required.png" alt="" />
             </div>
 
             <div class="error_img" *ngIf="email.valid && (email.touched || formSubmitted)">
-              <img src="checked.png" alt="" />
+              <img src="img/checked.png" alt="" />
             </div>
             <div class="error_mail" *ngIf="email.invalid && (email.touched || formSubmitted)">
               {{ 'error-email' | translate }}
@@ -99,7 +99,7 @@
               class="textarea_error_img"
               *ngIf="message.invalid && (message.touched || formSubmitted)"
             >
-              <img src="required.png" alt="" />
+              <img src="img/required.png" alt="" />
             </div>
 
             <!-- SUCCESS ICON -->
@@ -107,7 +107,7 @@
               class="textarea_error_img"
               *ngIf="message.valid && (message.touched || formSubmitted)"
             >
-              <img src="checked.png" alt="" />
+              <img src="img/checked.png" alt="" />
             </div>
           </div>
 
