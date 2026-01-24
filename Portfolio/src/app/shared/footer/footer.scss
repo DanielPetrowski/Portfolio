@@ -28,13 +28,10 @@ section {
   img {
     height: 30px;
     width: 30px;
-    transition:
-      width 0.5s,
-      height 0.5s;
+       transition: scale 0.2s;
     &:hover {
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      scale: 1.2;
     }
   }
 }
