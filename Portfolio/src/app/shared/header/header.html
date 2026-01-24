@@ -24,7 +24,8 @@
       </div>
 
       <div class="burger" (click)="toggleMenu()">
-        <img src="img/Property 1=burger.png" alt="Menu" />
+        <img [src]="images[animationIndex]"
+    alt="Menu Animation" />
       </div>
     </nav>
   </div>

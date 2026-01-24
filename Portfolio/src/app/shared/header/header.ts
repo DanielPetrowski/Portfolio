@@ -15,6 +15,49 @@ export class Header implements OnInit, OnDestroy {
 
   activeLang = 'de'; 
 
+    menuOpen = false;
+
+  animationIndex = 0;
+  isAnimating = false;
+
+  images = [
+    'img/Property 1=burger.png',
+    'img/Property 1=Transition.png',
+    'img/Property 1=close medium.png',
+    'img/Property 1=CLOSE FINAL.png'
+  ];
+
+toggleMenu() {
+    if (this.isAnimating) return;
+
+    this.isAnimating = true;
+
+    const opening = !this.menuOpen;
+
+    // Start-Index festlegen
+    this.animationIndex = opening
+      ? 0
+      : this.images.length - 1;
+
+    const step = opening ? 1 : -1;
+
+    const interval = setInterval(() => {
+      this.animationIndex += step;
+
+      const doneOpening =
+        opening && this.animationIndex === this.images.length - 1;
+      const doneClosing =
+        !opening && this.animationIndex === 0;
+
+      if (doneOpening || doneClosing) {
+        clearInterval(interval);
+        this.menuOpen = opening;
+        this.isAnimating = false;
+      }
+    }, 75);
+  }
+
+
   ngOnInit(): void {
   
     if (this.translate.currentLang) {
@@ -36,9 +79,4 @@ export class Header implements OnInit, OnDestroy {
     this.langSub.unsubscribe();
   }
 
-  menuOpen = false;
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
 }
