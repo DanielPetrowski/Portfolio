@@ -1,21 +1,19 @@
 @import '../../../variables.scss';
-section{
- 
+section {
   position: relative;
 }
 .main {
- 
   display: flex;
   align-items: center;
-margin-left: 380px;
+  margin-left: 380px;
   gap: 32px;
- padding-top: 220px;
- img{
-  position: absolute;
+  padding-top: 220px;
+  img {
+    position: absolute;
     bottom: -637px;
     left: -396px;
     height: 100%;
- }
+  }
 }
 
 .short_line {
@@ -25,8 +23,8 @@ margin-left: 380px;
   border-color: $purpleColor;
 }
 .headline {
-    margin: 0 10px;
-    margin-bottom: 32px;
+  margin: 0 10px;
+  margin-bottom: 32px;
   width: 389px;
   text-align: center;
   font-size: 90px;
@@ -39,53 +37,52 @@ margin-left: 380px;
   border-style: solid;
   border-color: $purpleColor;
 }
-.subheadline{
-    color: $whiteColor;
-    font-size: 16px;
-    margin-left: 380px;
+.subheadline {
+  color: $whiteColor;
+  font-size: 16px;
+  margin-left: 380px;
 }
 
-@media(max-width:1050px){
-  section{
-        margin-top: 220px;
-         overflow-x: hidden;
+@media (max-width: 1050px) {
+  section {
+    margin-top: 220px;
+    overflow-x: hidden;
   }
-  .main{
+  .main {
     gap: 16px;
-        margin-left: 24px;
-        padding-top: 110px;
-        img{
-          bottom: 295px;
-    left: 78px;
-    height: 15%;
-        }
-    
+    margin-left: 24px;
+
+    img {
+      bottom: 295px;
+      left: 78px;
+      height: 15%;
+    }
   }
-  .headline{
+  .headline {
     font-size: 45px;
     margin-bottom: 16px;
   }
-  .subheadline{
+  .subheadline {
     margin: 0;
     text-align: center;
   }
 }
-@media(max-width:359px){
-  section{
-            margin-top: 445px;
+@media (max-width: 359px) {
+  section {
+    margin-top: 445px;
   }
-  .main{
-    img{
-              bottom: 319px;
-        left: 74px;
-        height: 11%;
+  .main {
+    img {
+      bottom: 319px;
+      left: 74px;
+      height: 11%;
     }
   }
 }
 
 @media (min-width: 2160px) {
-  section{
-           padding-left: calc((100% - 1440px) / 2);
-        padding-right: calc((100% - 1440px) / 2);
+  section {
+    padding-left: calc((100% - 1440px) / 2);
+    padding-right: calc((100% - 1440px) / 2);
   }
 }
