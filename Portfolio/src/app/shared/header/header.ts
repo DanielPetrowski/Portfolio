@@ -27,6 +27,13 @@ export class Header implements OnInit, OnDestroy {
     'img/Property 1=CLOSE FINAL.png'
   ];
 
+  preloadImages() {
+  this.images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+
 toggleMenu() {
     if (this.isAnimating) return;
 
@@ -34,7 +41,7 @@ toggleMenu() {
 
     const opening = !this.menuOpen;
 
-    // Start-Index festlegen
+    
     this.animationIndex = opening
       ? 0
       : this.images.length - 1;
@@ -54,11 +61,12 @@ toggleMenu() {
         this.menuOpen = opening;
         this.isAnimating = false;
       }
-    }, 75);
+    }, 100);
   }
 
 
   ngOnInit(): void {
+    this.preloadImages();
   
     if (this.translate.currentLang) {
       this.activeLang = this.translate.currentLang;
