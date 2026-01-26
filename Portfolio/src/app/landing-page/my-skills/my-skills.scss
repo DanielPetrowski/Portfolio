@@ -3,6 +3,7 @@
 section {
   height: 515px;
   position: relative;
+  z-index: 1;
   img{
         position: absolute;
   left: -252px;
@@ -138,7 +139,7 @@ section {
     color: $purpleColor;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1327px) {
     section{
         img{
               

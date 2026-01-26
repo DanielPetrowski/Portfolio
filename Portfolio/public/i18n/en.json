@@ -5,7 +5,7 @@
   "down":"down",
   "I am":"I am",
 
-  "my-skills":"my skills",
+  "my-skills":"My skills",
   "introduction":"I’m passionate about software development and web design, and I started learning through online videos. I enjoy working with JavaScript, Angular, and Git because I like solving problems and growing professionally. I prefer teamwork since it helps me learn from others. My motivation comes from enjoying the learning process, creating my own projects, and building a career in IT.",
   "locate":"I’m based in Germany and enjoy working in flexible, modern setups. I’m open to remote work",
   "motivate": "I am open to new ideas and enthusiastic about learning modern technologies as well as continuously improving my skills.",
@@ -71,7 +71,7 @@
     "agreement-2":", and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of ",
 		"agreement-3":" and/or your breach of this Legal Notice.",
     "contact": "For any questions or notices, please contact us at kontakt@daniel-petrowski.de",
-		"date": "Date: November 23, 2026"
+		"date": "Date: November 23, 2026",
 
-
+ "headline_policy":"Privacy Policy"
 }

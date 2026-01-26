@@ -126,6 +126,9 @@ nav {
         background-color: transparent;
         color: $whiteColor;
         border-style: none;
+        &:hover{
+         cursor: pointer;
+        }
         &.active {
           color: $greenColor;
         }
