@@ -168,7 +168,7 @@ form {
     margin-left: 56px;
   }
   textarea {
-    width: 646px;
+    width: 642px;
     height: 202px;
     border-style: solid;
     border-color: $purpleColor;
@@ -176,10 +176,14 @@ form {
     border-radius: 10px;
     color: $whiteColor;
     border-width: 2px;
+     padding-top: 16px;
+     text-indent: 20px;
     &::placeholder {
       color: $whiteColor;
       padding-left: 25px;
       padding-top: 15px;
+      text-indent: 0;
+      transform: translateY(-8px);
     }
     &:hover {
       border-color: $greenColor;
@@ -335,7 +339,7 @@ a {
     }
     textarea {
       width: 100%;
-      padding: 10px;
+      
     }
     .error_textarea {
       width: 100%;
