@@ -112,22 +112,24 @@ section {
     margin-top: -16px;
   }
   button {
-    width: 200px;
-    height: 58px;
-    background-color: $greenColor;
-    font-size: 23px;
-    color: $whiteColor;
-    border-radius: 10px;
-    transition:
-      width 0.1s,
-      height 0.1s,
-      background-color 0.1s;
-    &:hover {
-      cursor: pointer;
-      width: 210px;
-      height: 63px;
-      background-color: $purpleColor;
-    }
+  width: 185px;
+  height: 58px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: $greenColor;
+  max-height: 63px;
+  font-size: 23px;
+  text-align: center;
+  align-self: center;
+  color: $whiteColor;
+  margin-top: 30px;
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  &:hover {
+    cursor: pointer;
+    width: 190px;
+    height: 63px;
+    background-color: $purpleColor;
+  }
   }
 }
 .looking {

@@ -142,6 +142,11 @@ section {
   writing-mode: vertical-lr;
   margin-right: 100px;
 }
+.footer_right{
+  img{
+    rotate: 90deg;
+  }
+}
 
 @media (max-width: 1050px) {
   .main {
@@ -170,9 +175,9 @@ section {
   }
   .left_side {
     img {
-      height: 40vh;
-      top: -8px;
-      object-fit: contain;
+           height: 39vh;
+        top: 1px;
+        object-fit: contain;
     }
   }
 
