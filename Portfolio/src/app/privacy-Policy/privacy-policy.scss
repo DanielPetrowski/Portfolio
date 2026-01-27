@@ -67,3 +67,31 @@ h2 {
       padding-right: 24px;
     }
   }}
+  .main{
+    margin: 0 204px;
+  }
+  h2{
+    font-size: 33px;
+    color: $purpleColor;
+  }
+
+  @media(max-width:1050px){
+    .main{
+      margin: 0 24px;
+    }
+    h2{
+      font-size: 20px;
+    }
+    p{
+      margin-top: 15px;
+    }
+
+    .policy-head {
+
+  h1 {
+    color: $greenColor;
+    padding-left: 24px;
+    font-size: 25px;
+  }
+}
+  }

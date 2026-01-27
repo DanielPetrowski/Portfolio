@@ -73,5 +73,30 @@
     "contact": "For any questions or notices, please contact us at kontakt@daniel-petrowski.de",
 		"date": "Date: November 23, 2026",
 
- "headline_policy":"Privacy Policy"
+ "headline_policy":"Privacy Policy",
+ "Data-Collection":"Data Collection",
+ "text-1":"If you send a message via the contact form on my portfolio, I only collect the information you voluntarily provide, such as your name and email address.",
+ "Data-Usage":"Data Usage",
+ "text-2":"The information you provide is used exclusively to respond to your inquiries via email and, if necessary, to stay in contact with you. Your data will not be shared with third parties. You can request the deletion or correction of your data at any time by sending me a brief email. All data is stored securely and only kept as long as necessary to process your inquiry.",
+
+  "PRIVACY": {
+    "SECTION_2_TITLE": " Collection and Processing of Personal Data",
+    "SECTION_2_TEXT": "On my portfolio, personal data is only collected if you voluntarily submit it via the contact form. The collected data includes:\n\n- Name\n- Email address\n- Message text\n\nThis data is processed solely for the purpose of responding to your message. It will not be shared with third parties.",
+
+    "SECTION_3_TITLE": " Legal Basis for Processing",
+    "SECTION_3_TEXT": "The processing of your personal data is based on your consent in accordance with Art. 6 para. 1 lit. a GDPR. By submitting your message, you agree to the processing of your data.",
+
+    "SECTION_4_TITLE": " Data Retention",
+    "SECTION_4_TEXT": "Your data will only be stored as long as necessary to process your request. After processing is complete or upon your request, the data will be deleted unless legal retention obligations exist.",
+
+    "SECTION_5_TITLE": " Your Rights",
+    "SECTION_5_TEXT": "You have the right at any time to:\n\n- Request information about the personal data stored about you\n- Correct inaccurate data\n- Delete your data\n- Restrict processing\n- Object to processing\n- Data portability\n\nTo exercise your rights, you can contact [email address] at any time.",
+
+    "SECTION_6_TITLE": " Security",
+    "SECTION_6_TEXT": "I take appropriate technical and organizational measures to protect your personal data from loss, misuse, and unauthorized access.",
+
+    "SECTION_7_TITLE": "Changes to the Privacy Policy",
+    "SECTION_7_TEXT": "This privacy policy may be adjusted as needed. The current version is available on my portfolio."
+  }
 }
+

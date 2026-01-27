@@ -68,5 +68,32 @@
   "agreement-3":"  und/oder Ihrem Verstoß gegen diese Rechtliche Hinweise ergeben.",
   "contact": "Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter kontakt@daniel-petrowski.de",
   "date": "Datum: 23. Januar 2026",
-  "headline_policy":"Datenschutzerklärung"
+  "headline_policy":"Datenschutzerklärung",
+  "Data-Collection":"Datenerfassung",
+ "text-1":"Wenn Sie über das Kontaktformular auf meinem Portfolio eine Nachricht senden, erfasse ich ausschließlich die von Ihnen freiwillig angegebenen Informationen, also Name und E-Mail-Adresse.",
+ "Data-Usage":"Datennutzung",
+ "text-2":"Die von Ihnen bereitgestellten Daten nutze ich ausschließlich, um Ihre Anfragen per E-Mail zu beantworten und ggf. mit Ihnen in Verbindung zu bleiben. Ihre Daten werden nicht an Dritte weitergegeben. Sie können jederzeit die Löschung oder Korrektur Ihrer Daten verlangen, indem Sie mir eine kurze Nachricht per E-Mail senden. Alle Daten werden sicher gespeichert und nur solange aufbewahrt, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist.",
+
+  
+  "PRIVACY": {
+    "SECTION_2_TITLE": " Erhebung und Verarbeitung personenbezogener Daten",
+    "SECTION_2_TEXT": "Auf meinem Portfolio werden personenbezogene Daten nur dann erhoben, wenn Sie mir diese freiwillig über das Kontaktformular übermitteln. Die erhobenen Daten umfassen:\n\n- Name\n- E-Mail-Adresse\n- Nachrichtentext\n\nDiese Daten werden ausschließlich zum Zweck der Beantwortung Ihrer Nachricht verarbeitet. Eine Weitergabe an Dritte erfolgt nicht.",
+
+    "SECTION_3_TITLE": " Rechtsgrundlage der Verarbeitung",
+    "SECTION_3_TEXT": "Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Durch das Absenden Ihrer Nachricht erklären Sie sich mit der Verarbeitung einverstanden.",
+
+    "SECTION_4_TITLE": " Speicherdauer",
+    "SECTION_4_TEXT": "Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist. Nach Abschluss der Bearbeitung oder auf Ihren Wunsch werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+
+    "SECTION_5_TITLE": " Ihre Rechte",
+    "SECTION_5_TEXT": "Sie haben jederzeit das Recht auf:\n\n- Auskunft über die zu Ihrer Person gespeicherten Daten\n- Berichtigung unrichtiger Daten\n- Löschung Ihrer Daten\n- Einschränkung der Verarbeitung\n- Widerspruch gegen die Verarbeitung\n- Datenübertragbarkeit\n\nZur Ausübung Ihrer Rechte können Sie sich jederzeit an [E-Mail-Adresse] wenden.",
+
+    "SECTION_6_TITLE": " Sicherheit",
+    "SECTION_6_TEXT": "Ich treffe angemessene technische und organisatorische Maßnahmen, um Ihre personenbezogenen Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.",
+
+    "SECTION_7_TITLE": " Änderungen der Datenschutzerklärung",
+    "SECTION_7_TEXT": "Diese Datenschutzerklärung kann bei Bedarf angepasst werden. Die jeweils aktuelle Version ist auf meinem Portfolio verfügbar."
+  }
+
+
 }
