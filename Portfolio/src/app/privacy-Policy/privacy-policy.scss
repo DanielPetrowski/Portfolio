@@ -36,7 +36,6 @@ h2 {
   margin-top: 24px;
 }
 
-
 @media (max-width: 1050px) {
   .line {
     display: none;
@@ -66,32 +65,38 @@ h2 {
 
       padding-right: 24px;
     }
-  }}
-  .main{
-    margin: 0 204px;
-  }
-  h2{
-    font-size: 33px;
-    color: $purpleColor;
-  }
-
-  @media(max-width:1050px){
-    .main{
-      margin: 0 24px;
-    }
-    h2{
-      font-size: 20px;
-    }
-    p{
-      margin-top: 15px;
-    }
-
-    .policy-head {
-
-  h1 {
-    color: $greenColor;
-    padding-left: 24px;
-    font-size: 25px;
   }
 }
+.main {
+  margin: 0 204px;
+}
+h2 {
+  font-size: 33px;
+  color: $purpleColor;
+}
+
+@media (max-width: 1050px) {
+  .main {
+    margin: 0 24px;
   }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    margin-top: 15px;
+  }
+
+  .policy-head {
+    h1 {
+      color: $greenColor;
+      padding-left: 24px;
+      font-size: 25px;
+    }
+  }
+}
+@media (min-width: 2160px) {
+  section {
+    padding-right: calc((100% - 1440px) / 2);
+    padding-left: calc((100% - 1440px) / 2);
+  }
+}

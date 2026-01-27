@@ -80,3 +80,9 @@ ul {
     font-size: 19px;
   }
 }
+@media (min-width: 2160px) {
+  section {
+    padding-right: calc((100% - 1440px) / 2);
+    padding-left: calc((100% - 1440px) / 2);
+  }
+}

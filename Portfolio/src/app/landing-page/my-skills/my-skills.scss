@@ -201,9 +201,12 @@ section {
 
 }
 @media(max-width:359px){
+  .headline{
+    font-size: 35px;
+  }
     .details{
         position: relative;
-        bottom: -600px;
+        bottom: -625px;
     }
 }
 

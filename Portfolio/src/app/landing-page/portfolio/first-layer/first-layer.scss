@@ -58,8 +58,6 @@
   transition:  background-color 0.1s;
   &:hover {
     cursor: pointer;
-    
-   
     background-color: $greenColor;
   }
   a{
@@ -134,7 +132,7 @@
   &:hover {
     cursor: pointer;
    
-    background-color: $purpleColor;
+    background-color: $greenColor;
   }
 
   }
