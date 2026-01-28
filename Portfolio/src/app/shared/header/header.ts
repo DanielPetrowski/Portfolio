@@ -2,10 +2,11 @@ import { NgIf } from '@angular/common';
 import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, NgIf],
+  imports: [TranslatePipe, NgIf, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
