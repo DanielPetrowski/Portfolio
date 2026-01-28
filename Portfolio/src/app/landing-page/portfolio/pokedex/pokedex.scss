@@ -13,8 +13,8 @@
 
 .left_side{
     img{
-            width: 620px;
-    height: 339px;
+            width: 100%;
+    height: auto;
     object-fit: cover;
     }
 }
@@ -109,8 +109,8 @@
   }
   .left_side{
     img{
-            width: 342px;
-    height: 213px;
+  width: 100%;
+        height: auto;
     object-fit: cover;
     }
 }
