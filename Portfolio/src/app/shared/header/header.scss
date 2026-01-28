@@ -18,6 +18,9 @@ section {
 .left {
   color: $whiteColor;
   height: 28px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 nav {
   display: flex;

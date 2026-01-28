@@ -29,4 +29,10 @@ export class Footer {
 
     window.open(url, '_blank', 'noopener');
   }
+  scrollToTop(): void {
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant'
+  });
+}
 }

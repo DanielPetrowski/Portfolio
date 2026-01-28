@@ -2,11 +2,10 @@ import { NgIf } from '@angular/common';
 import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, NgIf, RouterLink],
+  imports: [TranslatePipe, NgIf],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
@@ -87,5 +86,10 @@ toggleMenu() {
   ngOnDestroy(): void {
     this.langSub.unsubscribe();
   }
-
+scrollToTop(): void {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 }
