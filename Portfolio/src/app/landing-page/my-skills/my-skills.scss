@@ -46,6 +46,9 @@ section {
     text-align: center;
   }
 }
+.details_mobil{
+  display: none;
+}
 .learning_icon {
   display: flex;
   flex-direction: column;
@@ -95,7 +98,7 @@ section {
   gap: 32px;
   align-items: center;
   justify-content: end;
-  margin-bottom: 88px;
+  margin-bottom: 60px;
 }
 .line {
   width: 68px;
@@ -167,8 +170,8 @@ section {
   .details {
     text-align: center;
     width: 95%;
-            position: relative;
-        bottom: -399px;
+    display: none;
+       
     button {
       width: 128px;
       height: 49px;
@@ -183,6 +186,7 @@ section {
   }
   .looking {
     font-size: 24px;
+    margin: 20px 0;
   }
   svg{
     height: 48px;
@@ -194,11 +198,36 @@ section {
         justify-content: center;
         gap: 12px;
                 position: relative;
-        top: -159px;
+        margin-bottom: 30px;
         padding-right: 10px;
   }
 
-
+.details_mobil{
+  display: block;
+  color: white;
+    margin-right: 24px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 110px;
+       button {
+        margin-top: 30px;
+      width: 128px;
+      height: 49px;
+      font-size: 16px;
+      color: $whiteColor;
+      border-radius: 10px;
+      border-style: none;
+      background-color: $greenColor;
+      transition: none;
+      
+      &:hover {
+        cursor: pointer;
+        width: 128px;
+        height: 49px;
+        background-color: $greenColor;
+      }
+    }
+}
 
 }
 @media(max-width:359px){
