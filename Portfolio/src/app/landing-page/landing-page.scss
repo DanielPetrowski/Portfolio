@@ -6,7 +6,7 @@ section {
 .main {
   z-index: 0;
   width: 100%;
-  height: calc(100vh - 110px);
+  height: 100vh;
   position: relative;
   overflow: visible;
   padding-top: 110px;
@@ -16,7 +16,7 @@ section {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 615px;
+    height: 450px;
     background-color: #141D2F;
     border-bottom-left-radius: 0px 82px;
     border-bottom-right-radius: 643px;
@@ -33,14 +33,14 @@ section {
   color: $whiteColor;
 }
 .left_side {
-  height: 641px;
+  height: 100%;
   width: 100%;
 
   position: relative;
   img {
        /* object-fit: contain; */
     width: 100%;
-    height: 600px;
+    height: 430px;
     object-fit: contain;
   }
 }
